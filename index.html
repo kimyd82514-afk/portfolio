@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>김도현 · 퍼포먼스 마케팅 포트폴리오</title>
+<meta name="description" content="Meta · 네이버 검색광고 · Google Ads 운영 퍼포먼스 마케터 김도현의 성과 포트폴리오">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --ink: #111827; --ink-2: #374151; --muted: #6B7280; --line: #E5E7EB;
+    --bg: #F7F8FA; --panel: #FFFFFF; --brand: #1F3A8A; --brand-soft: #E8EDFB;
+    --up: #0F766E; --down: #B42318; --gold: #B7791F; --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: Pretendard, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  header.hero { background: #0B1531; color: #fff; padding: 72px 0 56px; }
+  .eyebrow { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #A5B4FC; font-weight: 600; }
+  .hero h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.15; margin: 12px 0 14px; font-weight: 700; letter-spacing: -0.02em; }
+  .hero p.lead { font-size: 18px; color: #CBD5E1; max-width: 720px; margin: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .chip { border: 1px solid rgba(255,255,255,.22); color: #E2E8F0; border-radius: 999px; padding: 5px 14px; font-size: 13px; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-top: -32px; }
+  .kpi { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; box-shadow: 0 6px 20px rgba(17,24,39,.05); }
+  .kpi .label { font-size: 13px; color: var(--muted); }
+  .kpi .val { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .kpi .foot { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  section { padding: 56px 0 8px; }
+  h2 { font-size: 24px; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 24px; font-size: 15px; }
+  .cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .case { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+  .case .top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .tag { font-size: 12px; font-weight: 600; color: var(--brand); background: var(--brand-soft); border-radius: 999px; padding: 4px 12px; }
+  .badge { font-size: 12px; border-radius: 999px; padding: 3px 10px; border: 1px solid; white-space: nowrap; }
+  .badge.ok { color: var(--up); border-color: #99D6CF; background: #F0FBF9; }
+  .badge.pending { color: var(--gold); border-color: #F2D49B; background: #FFF9EE; }
+  .case h3 { margin: 0; font-size: 19px; letter-spacing: -0.01em; }
+  .case .meta { font-size: 13px; color: var(--muted); margin-top: -8px; }
+  .metric-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .metric { background: var(--bg); border-radius: 10px; padding: 12px 14px; }
+  .metric .m-label { font-size: 12px; color: var(--muted); }
+  .metric .m-val { font-size: 17px; word-break: keep-all; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .metric .m-val.up { color: var(--up); } .metric .m-val.down { color: var(--down); }
+  .case dl { margin: 0; display: grid; gap: 10px; }
+  .case dt { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .case dd { margin: 2px 0 0; font-size: 14.5px; color: var(--ink-2); }
+  .stars { color: var(--gold); letter-spacing: 2px; font-size: 15px; }
+  .note { font-size: 12.5px; color: var(--muted); }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+  .bars { display: grid; gap: 14px; margin-top: 8px; }
+  .bar-row { display: grid; grid-template-columns: 110px 1fr 64px; align-items: center; gap: 12px; font-size: 14px; }
+  .bar-track { position: relative; height: 12px; background: #EEF0F4; border-radius: 999px; }
+  .bar-zero { position: absolute; top: -4px; bottom: -4px; width: 1px; background: #9CA3AF; }
+  .bar-fill { position: absolute; top: 0; bottom: 0; border-radius: 999px; }
+  .bar-val { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .compare { display: flex; align-items: flex-end; gap: 28px; margin: 12px 0 4px; }
+  .compare .col { flex: 1; text-align: center; }
+  .compare .col .stick { margin: 0 auto 8px; width: 56%; max-width: 90px; border-radius: 8px 8px 0 0; }
+  .compare .col .cv { font-weight: 700; font-size: 18px; font-variant-numeric: tabular-nums; }
+  .compare .col .cl { font-size: 12.5px; color: var(--muted); }
+  .timeline { display: grid; gap: 10px; }
+  .t-axis, .t-row { display: grid; grid-template-columns: 120px 1fr; align-items: center; gap: 12px; }
+  .t-axis .ticks { position: relative; height: 18px; font-size: 11.5px; color: var(--muted); }
+  .t-axis .ticks span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+  .t-name { font-size: 14px; font-weight: 600; text-align: right; }
+  .t-track { position: relative; height: 22px; background: #F1F3F7; border-radius: 6px; }
+  .t-bar { position: absolute; top: 4px; bottom: 4px; background: var(--brand); border-radius: 4px; }
+  .t-bar.unknown { background: repeating-linear-gradient(45deg, #C7D2FE, #C7D2FE 6px, #E0E7FF 6px, #E0E7FF 12px); }
+  .profile { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .profile h4 { margin: 0 0 10px; font-size: 14px; color: var(--brand); letter-spacing: .02em; }
+  .profile ul { margin: 0; padding-left: 18px; color: var(--ink-2); font-size: 14.5px; }
+  .profile li { margin-bottom: 6px; }
+  .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill { font-size: 13px; border: 1px solid var(--line); border-radius: 8px; padding: 5px 12px; background: var(--bg); }
+  footer { padding: 48px 0 56px; color: var(--muted); font-size: 13px; }
+  @media (max-width: 560px) {
+    .bar-row { grid-template-columns: 84px 1fr 56px; font-size: 13px; }
+    .t-axis, .t-row { grid-template-columns: 88px 1fr; }
+    .t-name { font-size: 12.5px; }
+    header.hero { padding: 56px 0 48px; }
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Performance Marketing Portfolio</div>
+    <h1>데이터로 증명하는 마케터, 김도현</h1>
+    <p class="lead">Meta · 네이버 검색광고 · Google Ads를 직접 운영하며 소재 테스트, 키워드 필터링, 매체 효율 분석으로 광고 성과를 관리해 왔습니다.</p>
+    <div class="chips">
+      <span class="chip">(주)온리온 퍼포먼스 마케팅 1팀 · 사원</span>
+      <span class="chip">2023.04 – 2024.06</span>
+      <span class="chip">검색광고마케터 1급</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="kpis" id="kpis">
+    <div class="kpi"><div class="label">담당 브랜드</div><div class="val">9개</div><div class="foot">입사 1년 내 동시 운영</div></div>
+    <div class="kpi"><div class="label">운영 매체</div><div class="val">3개+</div><div class="foot">Meta · 네이버 · Google 중심</div></div>
+    <div class="kpi"><div class="label">GDN ROAS 개선</div><div class="val">+30%</div><div class="foot">620% → 806% (O사)</div></div>
+    <div class="kpi"><div class="label">쇼핑검색 매출 증가</div><div class="val">+35.3%</div><div class="foot">전월 대비 (P사)</div></div>
+  </div>
+
+  <section id="cases">
+    <h2>대표 프로젝트</h2>
+    <p class="sub">고객사 보호를 위해 브랜드명은 이니셜로, 금액은 비율로만 표기했습니다.</p>
+    <div class="cases">
+      <article class="case">
+        <div class="top"><span class="tag">Google GDN · 자사몰</span><span class="badge ok">원본 데이터 검증</span></div>
+        <h3>O사 · GDN 소재 효율 개선</h3>
+        <div class="meta">홈·리빙 자사몰 · 2023.10 → 2023.11</div>
+        <div class="metric-row">
+          <div class="metric"><div class="m-label">GDN ROAS</div><div class="m-val up">620% → 806%</div></div>
+          <div class="metric"><div class="m-label">하루 평균 전환매출</div><div class="m-val up">+26.9%</div></div>
+        </div>
+        <dl>
+          <dt>문제</dt><dd>GDN 캠페인 안에서 구글 실적 등급 ‘나쁨’ 소재가 예산을 함께 쓰고 있었습니다.</dd>
+          <dt>실행</dt><dd>소재별 실적 등급을 점검해 비효율 소재를 끄고, 효율 소재 위주로 예산이 쓰이도록 재정비했습니다.</dd>
+          <dt>결과</dt><dd>하루 평균 광고비는 비슷하게 유지(−2.4%)하면서 하루 평균 전환매출 +26.9%, ROAS 620% → 806%. 같은 기간 자사몰 거래액은 +23%였습니다.</dd>
+        </dl>
+        <div><span class="note">기여도 </span><span class="stars" aria-label="5점 중 4점">★★★★☆</span> <span class="note">사수와 공동 운영 · 실무 운영 담당</span></div>
+      </article>
+
+      <article class="case">
+        <div class="top"><span class="tag">네이버 쇼핑검색</span><span class="badge ok">원본 데이터 검증</span></div>
+        <h3>P사 · 쇼핑검색 매출 확대</h3>
+        <div class="meta">건강기능식품 · 2024.03 → 2024.04</div>
+        <div class="metric-row">
+          <div class="metric"><div class="m-label">광고 전환매출</div><div class="m-val up">+35.3%</div></div>
+          <div class="metric"><div class="m-label">ROAS</div><div class="m-val down">133% → 115%</div></div>
+        </div>
+        <dl>
+          <dt>문제</dt><dd>전환 없이 광고비만 쓰는 검색어가 계속 발생했고, 월초 운영 공백으로 목표 예산이 남아 있었습니다.</dd>
+          <dt>실행</dt><dd>매주 월요일 검색어 리포트를 점검해 ‘5천원 이상 소진 + 전환 없음’ 검색어를 제외키워드로 등록하고, 매출 목표 달성을 위해 핵심 상품군 입찰가를 높였습니다.</dd>
+          <dt>결과</dt><dd>전환 +22.3%, 전환매출 +35.3%. 공격적인 입찰로 광고비가 +56.4% 늘어 ROAS는 낮아졌고, 이후 효율 기준 예산 재배분을 과제로 정리했습니다.</dd>
+        </dl>
+        <div><span class="note">기여도 </span><span class="stars" aria-label="5점 중 5점">★★★★★</span> <span class="note">단독 운영</span></div>
+      </article>
+
+      <article class="case">
+        <div class="top"><span class="tag">Meta</span><span class="badge pending">원본 리포트 확인 중</span></div>
+        <h3>R사 · Meta 소재 테스트 체계화</h3>
+        <div class="meta">중장년 여성 의류</div>
+        <div class="metric-row">
+          <div class="metric"><div class="m-label">ROAS (운영 기록)</div><div class="m-val">500%대 → 1000%</div></div>
+          <div class="metric"><div class="m-label">소재 OFF 기준 (14일)</div><div class="m-val">ROAS 1000%</div></div>
+        </div>
+        <dl>
+          <dt>문제</dt><dd>다른 매체 효율이 떨어지면서 Meta에서 빠르게 고효율 소재를 찾아야 했습니다.</dd>
+          <dt>실행</dt><dd>매일 할인율 강조·가격 강조 소재를 2개씩 기획해 별도 캠페인으로 테스트하고, 5천원 소진 후 전환이 없거나 ROAS 1000% 미만이면 끄는 기준을 운영했습니다. 고효율 소재는 어드밴티지 캠페인 리타겟팅으로 확장했습니다.</dd>
+          <dt>결과</dt><dd>운영 기록상 ROAS 500%대 → 1000%. 광고관리자 원본 리포트로 검증 후 수치를 확정할 예정입니다.</dd>
+        </dl>
+        <div><span class="note">기여도 </span><span class="stars" aria-label="5점 중 4점">★★★★☆</span> <span class="note">사수와 공동 운영 · 실무 운영 담당</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="charts">
+    <h2>성과를 숫자로 보면</h2>
+    <p class="sub">개선 전 기간 대비 변화율입니다. 같은 길이로 비교하기 위해 O사는 하루 평균으로 맞췄습니다.</p>
+    <div class="grid2">
+      <div class="panel">
+        <h3 style="margin:0 0 4px;font-size:16px">P사 · 네이버 쇼핑검색 (3월 → 4월)</h3>
+        <p class="note" style="margin:0 0 8px">매출은 늘었지만 광고비가 더 크게 늘어 효율은 낮아졌습니다.</p>
+        <div class="bars" id="p-bars"></div>
+      </div>
+      <div class="panel">
+        <h3 style="margin:0 0 4px;font-size:16px">O사 · Google GDN ROAS (10월 → 11월)</h3>
+        <p class="note" style="margin:0 0 8px">10월은 10/17부터 운영해 하루 평균 기준으로 비교했습니다.</p>
+        <div class="compare" id="o-compare"></div>
+        <div class="bars" id="o-bars" style="margin-top:18px"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="career">
+    <h2>담당 브랜드</h2>
+    <p class="sub">재직 기간 2023.04 – 2024.06 동안 동시에 운영한 브랜드입니다.</p>
+    <div class="panel"><div class="timeline" id="timeline"></div>
+      <p class="note" style="margin:14px 0 0">빗금 막대는 담당 기간을 정리 중인 브랜드입니다.</p></div>
+  </section>
+
+  <section id="profile">
+    <h2>역량</h2>
+    <p class="sub">직접 광고를 운영하고, 소재를 기획하고, 광고주와 소통했습니다.</p>
+    <div class="profile">
+      <div class="panel">
+        <h4>핵심 역량</h4>
+        <ul>
+          <li><b>문제 해결</b> — 이슈를 광고주에게 명확히 설명하고 개선안을 실행</li>
+          <li><b>빠른 학습</b> — 입사 1년 안에 9개 브랜드 담당, 선임 공백 시 업무 대체</li>
+          <li><b>데이터 분석</b> — 효율 하락 시 데이터로 원인을 찾고 개선안 제안</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h4>주요 업무</h4>
+        <ul>
+          <li>매체별 일간 리포트 작성 및 광고주 보고</li>
+          <li>검색광고 제외키워드·입찰가 관리 (매주 정기 점검)</li>
+          <li>Meta·GDN 소재별 효율 필터링, 신규 소재 기획</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h4>도구 · 자격 · 학력</h4>
+        <div class="skills">
+          <span class="skill">Meta 광고관리자</span><span class="skill">네이버 검색광고</span><span class="skill">Google Ads</span>
+          <span class="skill">GA4</span><span class="skill">Excel</span><span class="skill">SPSS</span><span class="skill">PowerPoint</span><span class="skill">Photoshop</span>
+        </div>
+        <ul style="margin-top:14px">
+          <li>검색광고마케터 1급</li>
+          <li>강남대학교 시니어비즈니스학부 · 경영학부 복수전공 (졸업)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">ⓒ 김도현 · 수치는 재직 당시 운영 리포트 기준이며, 고객사 보호를 위해 금액은 비율로만 표기했습니다.</div>
+</footer>
+
+<script>
+// 공개용 데이터: 비율·ROAS만 포함 (금액·건수 원본은 비공개 대시보드에만 보관)
+const DATA = {
+  p: [
+    { label: '전환매출', change: 35.3 },
+    { label: '전환수', change: 22.3 },
+    { label: '광고비', change: 56.4, neutral: true },
+    { label: 'ROAS', change: -13.5 },
+    { label: 'CPA', change: 27.8, lowerIsBetter: true }
+  ],
+  o: { roasBefore: 620, roasAfter: 806, bars: [
+    { label: '하루 평균 매출', change: 26.9 },
+    { label: '하루 평균 광고비', change: -2.4, neutral: true },
+    { label: 'ROAS', change: 30.0 }
+  ] },
+  career: [
+    ['마켓비', '2023-04', '2024-05'], ['누비지오', '2023-04', '2024-05'], ['쉬즈홈', '2023-04', '2024-05'],
+    ['한국금거래소', '2023-08', '2024-05'], ['오리고코리아', '2023-10', '2024-05'], ['로즈맘', '2023-11', '2024-05'],
+    ['풀무원건강생활', '2024-03', '2024-05'], ['VT코스메틱', null, null], ['딘토', null, null]
+  ],
+  employ: ['2023-04', '2024-06']
+};
+
+function bars(el, rows) {
+  const max = Math.max(...rows.map(r => Math.abs(r.change))) * 1.1;
+  const hasNeg = rows.some(r => r.change < 0);
+  const zero = hasNeg ? 30 : 0;
+  const scale = (100 - zero) / max;
+  rows.forEach(r => {
+    const good = r.neutral ? null : (r.lowerIsBetter ? r.change < 0 : r.change > 0);
+    const color = good === null ? '#9CA3AF' : good ? 'var(--up)' : 'var(--down)';
+    const w = Math.abs(r.change) * scale;
+    const left = r.change >= 0 ? zero : zero - Math.min(zero, w);
+    const row = document.createElement('div'); row.className = 'bar-row';
+    const l = document.createElement('div'); l.textContent = r.label;
+    const t = document.createElement('div'); t.className = 'bar-track';
+    if (hasNeg) { const z = document.createElement('div'); z.className = 'bar-zero'; z.style.left = zero + '%'; t.append(z); }
+    const f = document.createElement('div'); f.className = 'bar-fill'; f.style.left = left + '%'; f.style.width = Math.min(w, r.change >= 0 ? 100 - zero : zero) + '%'; f.style.background = color;
+    t.append(f);
+    const v = document.createElement('div'); v.className = 'bar-val'; v.style.color = color; v.textContent = (r.change > 0 ? '+' : '') + r.change.toFixed(1) + '%';
+    row.append(l, t, v); el.append(row);
+  });
+}
+bars(document.getElementById('p-bars'), DATA.p);
+bars(document.getElementById('o-bars'), DATA.o.bars);
+
+(function () {
+  const el = document.getElementById('o-compare');
+  const max = DATA.o.roasAfter * 1.05;
+  [['10월', DATA.o.roasBefore, '#CBD5E1'], ['11월', DATA.o.roasAfter, 'var(--brand)']].forEach(([lab, v, c]) => {
+    const col = document.createElement('div'); col.className = 'col';
+    const cv = document.createElement('div'); cv.className = 'cv'; cv.textContent = v + '%';
+    const s = document.createElement('div'); s.className = 'stick'; s.style.height = Math.round(v / max * 150) + 'px'; s.style.background = c;
+    const cl = document.createElement('div'); cl.className = 'cl'; cl.textContent = lab + ' ROAS';
+    col.append(cv, s, cl); el.append(col);
+  });
+})();
+
+(function () {
+  const el = document.getElementById('timeline');
+  const toM = s => { const [y, m] = s.split('-').map(Number); return y * 12 + (m - 1); };
+  const start = toM(DATA.employ[0]), end = toM(DATA.employ[1]) + 1, span = end - start;
+  const pct = m => (m - start) / span * 100;
+  const axis = document.createElement('div'); axis.className = 't-axis';
+  const blank = document.createElement('div');
+  const ticks = document.createElement('div'); ticks.className = 'ticks';
+  ['2023-04', '2023-10', '2024-04'].forEach(t => { const s = document.createElement('span'); s.style.left = pct(toM(t)) + '%'; s.textContent = t.replace('-', '.'); ticks.append(s); });
+  axis.append(blank, ticks); el.append(axis);
+  DATA.career.forEach(([name, s, e]) => {
+    const row = document.createElement('div'); row.className = 't-row';
+    const n = document.createElement('div'); n.className = 't-name'; n.textContent = name;
+    const tr = document.createElement('div'); tr.className = 't-track';
+    const b = document.createElement('div'); b.className = 't-bar' + (s ? '' : ' unknown');
+    const a = s ? toM(s) : start, z = e ? toM(e) + 1 : end;
+    b.style.left = pct(a) + '%'; b.style.width = (pct(z) - pct(a)) + '%';
+    b.title = s ? name + ' · ' + s.replace('-', '.') + ' – ' + e.replace('-', '.') : name + ' · 기간 정리 중';
+    tr.append(b); row.append(n, tr); el.append(row);
+  });
+})();
+</script>
+</body>
+</html>
